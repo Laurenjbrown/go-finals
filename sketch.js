@@ -113,7 +113,7 @@ function draw() {
 	if (fishMoving && !gameWon) {
 		// DRAW TEXT!
 		textSize(32)
-		text("SCORE: " + score, 1100, 30)
+		text("SCORE: " + score, 1000, 30)
 		text("TIME LEFT: " + (gameLengthInSeconds + (startTimer - second())), 30, 30)
 	}
 	if (gameWon) {
