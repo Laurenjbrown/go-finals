@@ -17,7 +17,7 @@ function preload() {
 	splashSound = loadSound("Water_Splash_Sound_FX_1.mp3");
 	catchSound = loadSound("Super_Mario_Bros_-Coin_Sound_Effect.mp3");
 	
-	splashSound.setVolume(.1)
+	splashSound.setVolume(.2)
 	ocean = loadImage("water.jpg");
 }
 
@@ -75,17 +75,17 @@ function draw() {
 	bubbles1()
 	
 	//seaweed in the background, will eventually sway back and forth
-	fill(10, 150 - sin(frameCount / 10) * 10, 30)
+	fill(10, 150 - sin(frameCount / 10) * 10, 30, 220)
 	quad(38, 200, 86, 20, 69, 63, 60, 650)
 	quad(238, 300, 206, 150, 209, 283, 260, 650)
 	quad(338, 400, 156, 90, 190, 63, 400, 650)
 	
-	fill(30, 100 - sin(frameCount / 10) * 10, 30)
+	fill(30, 100 - sin(frameCount / 10) * 10, 10, 210)
 	quad(458, 500, 400, 499, 450, 199, 600, 650)
 	quad(558, 575, 500, 599, 590, 159, 650, 700)
 	quad(658, 675, 600, 699, 690, 219, 700, 750)
 	
-	fill(30, 100 - sin(frameCount / 10) * 10, 30)
+	fill(30, 100 - sin(frameCount / 10) * 10, 50, 200)
 	quad(800, 500, 720, 500, 650, 499, 770, 300)
 	quad(850, 600, 820, 600, 750, 499, 700, 500)
 	quad(1000, 400, 620, 509, 890, 399, 800, 400)
