@@ -10,6 +10,7 @@ var gameWon = false
 var backMusic, splashSound, catchSound
 var startTimer = 0
 var gameLengthInSeconds = 15
+var ocean
 
 function preload() {
 	backMusic = loadSound("backmusic.mp3");
@@ -17,6 +18,7 @@ function preload() {
 	catchSound = loadSound("Super_Mario_Bros_-Coin_Sound_Effect.mp3");
 	
 	splashSound.setVolume(.2)
+	ocean = loadImage("water.jpg");
 }
 
 function setup() {
@@ -65,7 +67,11 @@ function speedChanged() {
 
 function draw() {
 	background(10, 50, 100 - sin(frameCount / 16) * 20)
-	
+	tint(255, 127); 
+	image(ocean, 0, 0)
+	ocean.resize(1300,800)
+	//image of background with ocean scene/ gif maybe?/ add effects so gradient is still visible
+	//trans/vis
 	bubbles1()
 	
 	//seaweed in the background, will eventually sway back and forth
@@ -85,6 +91,7 @@ function draw() {
 	quad(1000, 400, 620, 509, 890, 399, 800, 400)
 	
 	//should become a for loop, multiple circles to create a sandy floor
+	//now just an image of texture and sandy floor
 	fill(165, 136, 3)
 	ellipse(810, 600, 2500, 100)
 	
@@ -161,7 +168,7 @@ function drawFish(x, y) {
 	function bubbles1() {
 		for (var size = 5; size <= windowWidth; size = size + 30) {
 			noStroke()
-			fill(255, 255, 255, 70)
+			fill(255, 255, 255, 50)
 			ellipse(random(100 + size * 4), random(windowHeight), 40, 40)
 		}
 	}
@@ -169,7 +176,7 @@ function drawFish(x, y) {
 	function bubbles2() {
 		for (var x = 3; x <= windowWidth; x = x + 120) {
 			noStroke()
-			fill(255, 255, 255, 100)
+			fill(255, 255, 255, 70)
 			ellipse(random(10 + x * 2) - 50, random(windowHeight), 20, 20)
 		}
 	}
@@ -177,7 +184,7 @@ function drawFish(x, y) {
 function bubbles3() {
 		for (var size = 4; size <= windowWidth; size = size + 20) {
 			noStroke()
-			fill(255, 255, 255, 80)
+			fill(255, 255, 255, 60)
 			ellipse(random(10 + size * 2), random(windowHeight), 30, 30)
 	}
 }
