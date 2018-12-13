@@ -17,7 +17,7 @@ function preload() {
 	splashSound = loadSound("Water_Splash_Sound_FX_1.mp3");
 	catchSound = loadSound("Super_Mario_Bros_-Coin_Sound_Effect.mp3");
 	
-	splashSound.setVolume(.2)
+	splashSound.setVolume(.1)
 	ocean = loadImage("water.jpg");
 }
 
